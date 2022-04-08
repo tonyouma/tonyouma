@@ -1,9 +1,13 @@
 <template>
-  <Tutorial />
+  <div>
+    <div
+      class="relative h-screen items-center flex justify-center flex-col font-medium text-xl"
+    >
+      Tony Ouma
+    </div>
+  </div>
 </template>
 
 <script>
-export default {
-  name: 'IndexPage',
-}
+export default {}
 </script>
