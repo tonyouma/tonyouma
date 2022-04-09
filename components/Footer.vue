@@ -2,22 +2,15 @@
   <div class="">
     <div class="flex justify-between w-full mb-12">
       <div>
-        <p class="text-sm">&copy; Copyright {{currentDate.getFullYear()}}</p>
+        <p class="text-sm">&copy; Copyright {{ currentDate.getFullYear() }}</p>
       </div>
-      <ul class="gap-x-6 flex">
-        <li class="flex gap-x-3">
-          <span><LinkedinIcon /> </span>
-          <p class="text-gray-400">LinkedIn</p>
-        </li>
-        <li class="flex gap-x-3">
-          <span><GitHubIcon /> </span>
-          <p>GitHub</p>
-        </li>
-        <li class="flex gap-x-3">
-          <span><TwitterIcon /> </span>
-          <p>Twitter</p>
-        </li>
-        <!-- <li class="flex gap-x-3">GitHub</li> -->
+      <ul class="gap-x-10 flex">
+        <SocialMedia
+          v-for="link in socialLinks"
+          :key="link.title"
+          :title="link.title"
+          :href="link.href"
+        />
       </ul>
     </div>
   </div>
@@ -26,12 +19,30 @@
 import TwitterIcon from './Icons/TwitterIcon.vue'
 import LinkedinIcon from './Icons/LinkedinIcon.vue'
 import GitHubIcon from './Icons/GitHubIcon.vue'
+import SocialMedia from './SocialMedia.vue'
 // JS
 export default {
-  components: { TwitterIcon, LinkedinIcon, GitHubIcon },
+  components: { TwitterIcon, LinkedinIcon, GitHubIcon, SocialMedia },
   data() {
     return {
-      currentDate: new Date,
+      currentDate: new Date(),
+      socialLinks: [
+        {
+          title: 'Twitter',
+          icon: 'myIcon',
+          href: 'https://twitter.com/_tonyouma',
+        },
+        {
+          title: 'Linkedin',
+          icon: 'myIcon',
+          href: 'https://linkedin.com/in/tonyouma/',
+        },
+        {
+          title: 'GitHub',
+          icon: 'myIcon',
+          href: 'http://github.com/TonyOuma',
+        },
+      ],
     }
   },
 }

@@ -1,5 +1,5 @@
 <template>
-  <linkedin-icon size="1.5x" class="custom-class"></linkedin-icon>
+  <linkedin-icon size="1.1x" class="custom-class"></linkedin-icon>
 </template>
 
 <script>

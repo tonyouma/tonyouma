@@ -16,17 +16,19 @@
           minima quasi assumenda officia?
         </p>
       </div>
-      <div class="flex items-center w-full">
+      <div class="flex justify-between items-center w-full">
         <div>
           <button
-            class="py-2 px-6 button rounded-full flex gap-x-4 text items-center font-medium"
+            class="py-2 px-8 button rounded-full flex gap-x-4 text items-center font-bold bg-indigo-500 hover:bg-indigo-600 focus:outline-none"
           >
             Reach Out <span><SendIcon /> </span>
           </button>
         </div>
         <div>
-          <NuxtLink class="underline text-gray-400 ml-auto" to="*"
-            >Download resume
+          <NuxtLink
+            class="text-gray-400 flex gap-x-2 items-center text-sm"
+            to="*"
+            ><FileTextIcon /> Resume
           </NuxtLink>
         </div>
       </div>
@@ -35,13 +37,14 @@
 </template>
 <script>
 import SendIcon from './Icons/SendIcon.vue'
+import FileTextIcon from './Icons/FileTextIcon.vue'
 export default {
-  components: { SendIcon },
+  components: { SendIcon, FileTextIcon },
 }
 </script>
 <style scoped>
 .button {
-  background-color: #F6F3D4;
-  color: #695F15;
+  background-color: #f6f3d4;
+  color: #695f15;
 }
 </style>
