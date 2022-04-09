@@ -7,9 +7,7 @@
           <div class="">
             <Main />
           </div>
-          <!-- <div class="mt-5">
-            <Footer />
-          </div> -->
+          <Footer />
         </div>
       </div>
     </div>
@@ -22,4 +20,8 @@ import Footer from '~/components/Footer.vue'
 export default { components: { Navbar, Footer } }
 </script>
 
-<style></style>
+<style>
+html {
+  font-family: 'Lato';
+}
+</style>
