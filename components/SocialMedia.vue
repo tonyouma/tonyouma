@@ -1,7 +1,7 @@
 <template>
   <a :href="href" target="_blank" class="flex gap-x-2 items-center">
     <span>{{ icon }} </span>
-    <p class="text-sm text-gray-500">{{ title }}</p>
+    <p class="">{{ title }}</p>
   </a>
 </template>
 <script>

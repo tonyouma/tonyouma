@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <ul class="flex gap-x-12 justify-center py-8">
+      <ul class="flex gap-x-12 justify-center pt-3">
         <li class="font-bold">Home</li>
         <li>Projects</li>
         <li>Contact</li>

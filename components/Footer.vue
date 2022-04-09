@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <div class="flex justify-between w-full mb-12">
+    <div class="flex justify-between w-full mb-12 text-sm text-gray-500">
       <div>
-        <p class="text-sm">&copy; Copyright {{ currentDate.getFullYear() }}</p>
+        <p class="">&copy; Copyright {{ currentDate.getFullYear() }}</p>
       </div>
       <ul class="gap-x-10 flex">
         <SocialMedia

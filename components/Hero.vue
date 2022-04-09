@@ -1,12 +1,12 @@
 <template>
-  <div class="h-screen">
-    <div class="my-auto">
-      <div class="my-auto">
+  <div class="h-screen items-center flex ">
+    <div class="">
+      <div class="">
         <p class="text-2xl">
           Hello there, <span>&#128075;</span>
           <!-- I am -->
         </p>
-        <h1 class="text-5xl font-bold py-8">
+        <h1 class="text-5xl font-bold py-12">
           I am Tony Ouma<br />
           <span class="text-4xl">UI/UX Designer and Software Developer</span>
         </h1>
@@ -25,11 +25,11 @@
           </button>
         </div>
         <div>
-          <NuxtLink
+          <a
             class="text-gray-400 flex gap-x-2 items-center text-sm"
-            to="*"
+            href="https://read.cv/ouma"
             ><FileTextIcon /> Resume
-          </NuxtLink>
+          </a>
         </div>
       </div>
     </div>

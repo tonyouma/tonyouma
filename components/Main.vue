@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="mt-12">
+    <div class="">
       <Hero />
     </div>
   </div>
