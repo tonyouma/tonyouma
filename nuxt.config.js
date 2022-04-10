@@ -36,13 +36,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    "@nuxtjs/pwa"
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/cloudinary',
   ],
-  buildModules: ["@nuxtjs/pwa"],
   cloudinary: {
     cloudName: process.env.CLOUDNAME,
     apiKey: process.env.API_KEY,
