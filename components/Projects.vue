@@ -3,7 +3,7 @@
     <!-- <p class="text-right">Projects</p> -->
 
     <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-2``">
-      <img src="~/assets/Group 867.png" alt="" class="" />
+      <img :src="src" alt="" class="Kachezwe Site Preview" />
       <div class="my-auto">
         <h3 class="text-xl font-semibold md:text-right">
           Kachezwe Web Application
@@ -14,7 +14,10 @@
           interactions
         </p>
         <span class="px-4 pt-6 flex items-center gap-x-2"
-          ><LinkIcon /> <a href="https://kachezwe.com" target="_blank" class="link">kachezwe.com</a></span
+          ><LinkIcon />
+          <a href="https://kachezwe.com" target="_blank" class="link"
+            >kachezwe.com</a
+          ></span
         >
         <p class="text-xs py-3 px-4">
           Design Credits:
@@ -26,7 +29,14 @@
 </template>
 <script>
 import LinkIcon from './Icons/LinkIcon.vue'
-export default { components: { LinkIcon } }
+export default {
+  components: { LinkIcon },
+  data() {
+    return {
+      src: this.$cloudinary.image.url('tonyouma/kachezwe.png', {}),
+    }
+  },
+}
 </script>
 <style scoped>
 .link {
