@@ -14,7 +14,7 @@
           interactions
         </p>
         <span class="px-4 pt-6 flex items-center gap-x-2"
-          ><LinkIcon /> <a href="#" class="link">kachezwe.com</a></span
+          ><LinkIcon /> <a href="https://kachezwe.com" target="_blank" class="link">kachezwe.com</a></span
         >
         <p class="text-xs py-3 px-4">
           Design Credits:
