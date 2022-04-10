@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="flex justify-between w-full mb-12 text-sm text-gray-500">
+    <div class="flex justify-between w-full my-12 text-sm text-gray-500">
       <div>
         <p class="">&copy; Copyright {{ currentDate.getFullYear() }}</p>
       </div>
@@ -10,6 +10,7 @@
           :key="link.title"
           :title="link.title"
           :href="link.href"
+          icon slot="icon"
         />
       </ul>
     </div>
@@ -29,18 +30,23 @@ export default {
       socialLinks: [
         {
           title: 'Twitter',
-          icon: 'myIcon',
+          icon: 'TwitterIcon',
           href: 'https://twitter.com/_tonyouma',
         },
         {
           title: 'Linkedin',
-          icon: 'myIcon',
+          icon: 'LinkedinIcon',
           href: 'https://linkedin.com/in/tonyouma/',
         },
         {
           title: 'GitHub',
+          icon: 'GitHubIcon',
+          href: 'https://github.com/TonyOuma',
+        },
+        {
+          title: 'Peerlist',
           icon: 'myIcon',
-          href: 'http://github.com/TonyOuma',
+          href: 'https://peerlist.io/tonyouma',
         },
       ],
     }
