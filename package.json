@@ -1,6 +1,6 @@
 {
   "name": "TonyOuma",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -9,7 +9,8 @@
     "generate": "nuxt generate",
     "lint:prettier": "prettier --check .",
     "lint": "yarn lint:prettier",
-    "lintfix": "prettier --write --list-different ."
+    "lintfix": "prettier --write --list-different .",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@nuxtjs/cloudinary": "^1.0.3",
@@ -26,6 +27,14 @@
     "@nuxtjs/tailwindcss": "^4.2.1",
     "eslint-config-prettier": "^8.3.0",
     "postcss": "^8.4.4",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "semantic-release": "^19.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TonyOuma/TonyOuma.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
