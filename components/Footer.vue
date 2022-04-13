@@ -1,19 +1,20 @@
 <template>
-  <div class="">
-    <div class="flex justify-between w-full my-12 text-sm text-gray-500">
-      <div>
-        <p class="">&copy; Copyright {{ currentDate.getFullYear() }}</p>
-      </div>
-      <ul class="gap-x-10 flex">
-        <SocialMedia
-          v-for="link in socialLinks"
-          :key="link.title"
-          :title="link.title"
-          :href="link.href"
-          icon slot="icon"
-        />
-      </ul>
+  <div
+    class="grid md:grid-cols-2 md:flex-row w-full my-12 text-sm text-gray-500"
+  >
+    <div>
+      <p class="flex">&copy; Copyright {{ currentDate.getFullYear() }}</p>
     </div>
+    <ul class="gap-x-10 flex ">
+      <SocialMedia
+        v-for="link in socialLinks"
+        :key="link.title"
+        :title="link.title"
+        :href="link.href"
+        icon
+        slot="icon"
+      />
+    </ul>
   </div>
 </template>
 <script>

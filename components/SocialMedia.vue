@@ -1,6 +1,6 @@
 <template>
   <a :href="href" target="_blank" class="flex gap-x-2 items-center">
-    <slot name="icon"> </slot>
+    <!-- <slot name="icon"> </slot> -->
     <p class="">{{ title }}</p>
   </a>
 </template>
@@ -15,10 +15,10 @@ export default {
       type: String,
       default: '',
     },
-    icon: {
-      type: Function,
-      default: '',
-    },
+    // icon: {
+    //   type: Function,
+    //   default: '',
+    // },
 
   },
 }

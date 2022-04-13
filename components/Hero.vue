@@ -6,9 +6,9 @@
           Hello there, <span>&#128075;</span>
           <!-- I am -->
         </p>
-        <h1 class="md:text-5xl text-5xl font-bold py-12">
+        <h1 class="md:text-5xl text-4xl font-bold md:py-12 py-4">
           I am Tony Ouma<br />
-          <span class="text-xl md:text-4xl"
+          <span class="text-base md:text-4xl"
             >UI/UX Designer and Software Developer</span
           >
         </h1>
