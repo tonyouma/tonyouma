@@ -5,7 +5,7 @@
     <div>
       <p class="flex">&copy; Copyright {{ currentDate.getFullYear() }}</p>
     </div>
-    <ul class="gap-x-10 flex ">
+    <ul class="gap-x-10 flex md:justify-end md:pt-0 pt-4 order-last">
       <SocialMedia
         v-for="link in socialLinks"
         :key="link.title"

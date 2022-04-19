@@ -24,7 +24,7 @@
         <div>
           <a
             href="mailto:oumat61@gmail.com"
-            class="py-2 px-8 button rounded-full flex gap-x-4 text items-center font-bold bg-indigo-500 hover:bg-indigo-600 focus:outline-none"
+            class="py-2 px-8 button rounded-full flex gap-x-2 text items-center font-bold bg-indigo-500 hover:bg-indigo-600 focus:outline-none"
           >
             Reach Out <span><SendIcon /> </span>
           </a>
