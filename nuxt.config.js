@@ -54,7 +54,9 @@ export default {
   sitemap: {
     hostname: process.env.SITE_MAP_HOSTNAME,
   },
-
+  generate: {
+    fallback: true,
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
