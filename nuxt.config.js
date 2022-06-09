@@ -52,7 +52,7 @@ export default {
     id: process.env.GOOGLE_ANALYTICS_ID,
   },
   sitemap: {
-    hostname: process.env.SITEMAP_HOSTNAME,
+    hostname: process.env.SITE_MAP_HOSTNAME,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
