@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue'
 import Footer from '~/components/Footer.vue'
+import Navbar from '~/components/Navbar.vue'
 export default { components: { Navbar, Footer } }
 </script>
 
 <style>
 html {
-  font-family: 'Lato';
+  font-family: 'Avenir Next LT Pro';
 }
 </style>

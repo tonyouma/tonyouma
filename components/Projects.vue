@@ -2,7 +2,7 @@
   <div>
     <!-- <p class="text-right">Projects</p> -->
 
-    <div class="grid md:gap-10 gap-2 md:grid-cols-2 lg:grid-cols-2``">
+    <div class="grid md:gap-10 gap-2 md:grid-cols-2 lg:grid-cols-2">
       <img :src="src" alt="Kachezwe Site Preview" class="" />
       <div class="my-auto">
         <h3 class="text-xl font-semibold md:text-right">
@@ -25,12 +25,12 @@
         </p>
       </div>
     </div>
-    <div class="grid md:gap-10 gap-2 md:grid-cols-2 lg:grid-cols-2 md:py-4 py-12">
+    <div
+      class="grid md:gap-10 gap-2 md:grid-cols-2 lg:grid-cols-2 md:py-4 py-12"
+    >
       <div class="my-auto order-last">
         <h3 class="text-xl font-semibold">Moja Website</h3>
-        <p class="py-4 text-gray-600">
-          Moja 
-        </p>
+        <p class="py-4 text-gray-600">Moja</p>
         <span class="md:pt-6 flex items-center gap-x-2"
           ><LinkIcon />
           <a href="https://moja-site.netlify.app/" target="_blank" class="link"
@@ -57,7 +57,25 @@ export default {
   data() {
     return {
       src: this.$cloudinary.image.url('tonyouma/projects/kachezwe.png', {}),
+      // src: this.$cloudinary.v2.api.resources({
+      //   type: 'upload',
+      //   prefix: 'tonyouma/projects', // add your folder
+      // }),
+      // function(error, result) { console.log(result, error) })
     }
+  },
+  methods: {
+    getImages() {
+      return this.$cloudinary.v2.api.resources(
+        {
+          type: 'upload',
+          prefix: 'tonyouma/projects', // add your folder
+        },
+        function (error, result) {
+          console.log(result, error)
+        }
+      )
+    },
   },
 }
 </script>
