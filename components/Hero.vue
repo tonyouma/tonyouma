@@ -6,7 +6,7 @@
           Hello there, <span>&#128075;</span>
           <!-- I am -->
         </p>
-        <h1 class="md:text-5xl text-4xl font-bold md:py-12 py-4">
+        <h1 class="md:text-6xl text-4xl font-bold md:py-12 py-4">
           I am Tony Ouma<br />
           <span class="text-base md:text-4xl"
             >UI/UX Designer and Software Developer</span
@@ -24,7 +24,7 @@
         <div>
           <a
             href="mailto:oumat61@gmail.com"
-            class="py-2 px-8 button rounded-full flex gap-x-2 text items-center font-bold bg-indigo-500 hover:bg-indigo-600 focus:outline-none"
+            class="py-2 px-10 button rounded-full flex gap-x-2 text items-center font-medium bg-indigo-500 hover:bg-indigo-600 focus:outline-none"
           >
             Reach Out <span><SendIcon /> </span>
           </a>

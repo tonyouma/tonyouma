@@ -3,7 +3,7 @@
     <!-- <p class="text-right">Projects</p> -->
 
     <div class="grid md:gap-10 gap-2 md:grid-cols-2 lg:grid-cols-2">
-      <img :src="src" alt="Kachezwe Site Preview" class="" />
+      <img :src="src" alt="Kachezwe Site Preview" class="" loading="lazy" />
       <div class="my-auto">
         <h3 class="text-xl font-semibold md:text-right">
           Kachezwe Web Application
@@ -46,6 +46,7 @@
         src="https://res.cloudinary.com/oumat/image/upload/v1649678642/tonyouma/projects/moja.png"
         alt="Kachezwe Site Preview"
         class="md:order-last"
+        loading="lazy"
       />
     </div>
   </div>
