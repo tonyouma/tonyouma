@@ -1,23 +1,18 @@
 <template>
-  <div style="background: #f8f9fd" class="">
-    <div class="container mx-auto">
-      <div class="flex justify-center md:px-12 px-6">
-        <div class="w-full xl:w-3/4 lg:w-11/12">
-          <Navbar />
-          <div class="">
-            <Main />
-          </div>
-          <Footer />
-        </div>
-      </div>
+  <div class="">
+    <div class="">
+      <Hero />
+    </div>
+    <div>
+      <Projects />
     </div>
   </div>
 </template>
 
 <script>
-import Footer from '~/components/Footer.vue'
-import Navbar from '~/components/Navbar.vue'
-export default { components: { Navbar, Footer } }
+import Hero from '../components/Hero.vue'
+import Projects from '../components/Projects.vue'
+export default { components: { Hero, Projects } }
 </script>
 
 <style>
