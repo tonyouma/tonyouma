@@ -32,9 +32,9 @@ export default {
       currentDate: new Date(),
       socialLinks: [
         {
-          title: 'Twitter',
+          title: 'X.com',
           icon: 'TwitterIcon',
-          href: 'https://twitter.com/_tonyouma',
+          href: 'https://twitter.com/TonyOOuma',
         },
         {
           title: 'Linkedin',
