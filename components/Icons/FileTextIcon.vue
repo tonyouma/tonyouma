@@ -7,7 +7,7 @@ import { FileTextIcon } from 'vue-feather-icons'
 
 export default {
   components: {
-    FileTextIcon
-  }
+    FileTextIcon,
+  },
 }
 </script>

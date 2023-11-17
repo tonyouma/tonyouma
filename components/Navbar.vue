@@ -15,11 +15,11 @@ export default {}
 </script>
 <style>
 ul {
-    -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-     -ms-transition: all 0.3s ease-out;
-     -o-transition: all 0.3s ease-out;
-     transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 ul li {
   transition: color 0.35s ease;

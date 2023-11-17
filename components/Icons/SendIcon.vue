@@ -7,7 +7,7 @@ import { SendIcon } from 'vue-feather-icons'
 
 export default {
   components: {
-    SendIcon
-  }
+    SendIcon,
+  },
 }
 </script>

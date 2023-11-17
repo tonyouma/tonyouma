@@ -3,7 +3,9 @@
     class="grid md:grid-cols-2 md:flex-row w-full my-12 text-sm text-gray-500"
   >
     <div>
-      <p class="flex text-xs">Site assets/design &copy; {{ currentDate.getFullYear() }} Tony Ouma</p>
+      <p class="flex text-xs">
+        Site assets/design &copy; {{ currentDate.getFullYear() }} Tony Ouma
+      </p>
     </div>
     <ul class="gap-x-10 flex md:justify-end md:pt-0 pt-4 order-last">
       <SocialMedia

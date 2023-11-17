@@ -7,7 +7,7 @@ import { CalendarIcon } from 'vue-feather-icons'
 
 export default {
   components: {
-    CalendarIcon
-  }
+    CalendarIcon,
+  },
 }
 </script>

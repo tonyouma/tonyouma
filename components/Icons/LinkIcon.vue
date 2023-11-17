@@ -7,7 +7,7 @@ import { LinkIcon } from 'vue-feather-icons'
 
 export default {
   components: {
-    LinkIcon
-  }
+    LinkIcon,
+  },
 }
 </script>
