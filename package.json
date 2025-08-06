@@ -1,43 +1,27 @@
 {
-  "name": "tonyouma.com",
-  "version": "0.0.0-development",
+  "name": "tonyouma",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:prettier",
-    "lintfix": "prettier --write --list-different .",
-    "semantic-release": "semantic-release"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@nuxtjs/cloudinary": "^1.0.3",
-    "@nuxtjs/sitemap": "^2.4.0",
-    "core-js": "^3.19.3",
-    "nuxt": "^2.15.8",
-    "vue": "^2.6.14",
-    "vue-feather-icons": "^5.1.0",
-    "vue-server-renderer": "^2.6.14",
-    "vue-template-compiler": "^2.6.14",
-    "webpack": "^4.46.0"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.4.5"
   },
   "devDependencies": {
-    "@nuxt/image": "^0.6.2",
-    "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/pwa": "^3.3.5",
-    "@nuxtjs/tailwindcss": "^4.2.1",
-    "eslint-config-prettier": "^8.3.0",
-    "postcss": "^8.4.4",
-    "prettier": "^2.5.1",
-    "semantic-release": "^19.0.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/TonyOuma/TonyOuma.git"
-  },
-  "publishConfig": {
-    "access": "restricted"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.5",
+    "@eslint/eslintrc": "^3"
   }
 }
