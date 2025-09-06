@@ -52,15 +52,7 @@ export default function Home() {
       </header>
 
       <section className="space-y-5 text-balance">
-        <p className="text-base/7 text-foreground/90">
-          Software engineer focused on minimal products, strong UX, and
-          dependable systems. Fintech & EdTech focus; I design, build, and ship
-          end‑to‑end.
-        </p>
-        <p className="text-base/7 text-foreground/70">
-          Web & mobile with TypeScript, React/Next.js, React Native, Tailwind,
-          and GraphQL.
-        </p>
+        <p className="text-base/7 text-foreground/90">Herding digital cats.</p>
       </section>
 
       {/* Work */}
