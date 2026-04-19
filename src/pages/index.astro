@@ -65,7 +65,12 @@ import Layout from "../layouts/Layout.astro";
     font-family: var(--serif);
     font-size: 24px;
   }
-  @media (hover: none) { body { cursor: auto; } .cursor { display: none; } }
+  @media (hover: none) {
+    body { cursor: auto; }
+    .cursor { display: none; }
+    .preview { display: none; }
+    .work-row:hover { padding-left: 0; }
+  }
 
   /* ─── Top bar ────────────────────────────────────── */
   .topbar {
@@ -794,43 +799,47 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <script>
-  // ── Custom cursor ──────────────────────────────────
-  const cursor = document.getElementById('cursor')!;
-  const preview = document.getElementById('preview')!;
-  const previewInner = document.getElementById('previewInner')!;
-  let mx = 0, my = 0, cx = 0, cy = 0;
+  // ── Custom cursor (pointer devices only) ──────────
+  const hasHover = window.matchMedia('(hover: hover)').matches;
 
-  window.addEventListener('mousemove', (e: MouseEvent) => {
-    mx = e.clientX; my = e.clientY;
-    (preview as HTMLElement).style.left = mx + 'px';
-    (preview as HTMLElement).style.top = my + 'px';
-  });
+  if (hasHover) {
+    const cursor = document.getElementById('cursor')!;
+    const preview = document.getElementById('preview')!;
+    const previewInner = document.getElementById('previewInner')!;
+    let mx = 0, my = 0, cx = 0, cy = 0;
 
-  function loop() {
-    cx += (mx - cx) * 0.22;
-    cy += (my - cy) * 0.22;
-    (cursor as HTMLElement).style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
-    requestAnimationFrame(loop);
+    window.addEventListener('mousemove', (e: MouseEvent) => {
+      mx = e.clientX; my = e.clientY;
+      (preview as HTMLElement).style.left = mx + 'px';
+      (preview as HTMLElement).style.top = my + 'px';
+    });
+
+    function loop() {
+      cx += (mx - cx) * 0.22;
+      cy += (my - cy) * 0.22;
+      (cursor as HTMLElement).style.transform = `translate(${cx}px, ${cy}px) translate(-50%, -50%)`;
+      requestAnimationFrame(loop);
+    }
+    loop();
+
+    document.querySelectorAll<HTMLElement>('.work-row').forEach(row => {
+      row.addEventListener('mouseenter', () => {
+        cursor.classList.add('hot');
+        const sw = row.dataset.swatch ?? '';
+        previewInner.className = 'preview-inner ' + sw;
+        preview.classList.add('show');
+      });
+      row.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hot');
+        preview.classList.remove('show');
+      });
+    });
+
+    document.querySelectorAll<HTMLElement>('a:not(.work-row)').forEach(a => {
+      a.addEventListener('mouseenter', () => cursor.classList.add('hot'));
+      a.addEventListener('mouseleave', () => cursor.classList.remove('hot'));
+    });
   }
-  loop();
-
-  document.querySelectorAll<HTMLElement>('.work-row').forEach(row => {
-    row.addEventListener('mouseenter', () => {
-      cursor.classList.add('hot');
-      const sw = row.dataset.swatch ?? '';
-      previewInner.className = 'preview-inner ' + sw;
-      preview.classList.add('show');
-    });
-    row.addEventListener('mouseleave', () => {
-      cursor.classList.remove('hot');
-      preview.classList.remove('show');
-    });
-  });
-
-  document.querySelectorAll<HTMLElement>('a:not(.work-row)').forEach(a => {
-    a.addEventListener('mouseenter', () => cursor.classList.add('hot'));
-    a.addEventListener('mouseleave', () => cursor.classList.remove('hot'));
-  });
 
   // ── Nairobi clock ──────────────────────────────────
   function tick() {
