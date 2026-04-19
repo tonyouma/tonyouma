@@ -5,9 +5,12 @@ interface Props {
 }
 
 const {
-  title = "tony@ouma:~$",
-  description = "Software engineer. I build clean, reliable products.",
+  title = "Tony Ouma — Frontend Engineer | Nairobi, Kenya",
+  description = "Tony Ouma is a frontend engineer based in Nairobi, Kenya with 5+ years building fintech, edtech, and mobile products. React, TypeScript, React Native, GraphQL, Tailwind.",
 } = Astro.props;
+
+const canonicalURL = "https://tonyouma.com";
+const ogImage = `${canonicalURL}/og.png`;
 ---
 
 <!doctype html>
@@ -15,25 +18,89 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Primary -->
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content="Tony Ouma, frontend engineer, software engineer, Nairobi, Kenya, React, TypeScript, React Native, Next.js, GraphQL, Tailwind CSS, fintech, edtech, mobile engineer, UI engineer, Gapstack, Tukai, Kidato, JavaScript developer, web developer Kenya" />
+    <meta name="author" content="Tony Ouma" />
+    <link rel="canonical" href={canonicalURL} />
 
+    <!-- Robots -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="Tony Ouma — Frontend Engineer" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content="Tony Ouma" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tony Ouma — Frontend Engineer based in Nairobi, Kenya" />
+    <meta property="profile:first_name" content="Tony" />
+    <meta property="profile:last_name" content="Ouma" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tony Ouma — Frontend Engineer" />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="Tony Ouma — Frontend Engineer based in Nairobi, Kenya" />
+
+    <!-- Geo -->
+    <meta name="geo.region" content="KE-30" />
+    <meta name="geo.placename" content="Nairobi, Kenya" />
+
+    <!-- Favicons -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Sitemap -->
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
 
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <meta property="og:title" content="Tony Ouma" />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content="https://tonyouma.com" />
-    <meta property="og:site_name" content="Tony Ouma" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Tony Ouma" />
-    <meta name="twitter:description" content={description} />
-
+    <!-- JSON-LD structured data -->
+    <script type="application/ld+json" is:inline>
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Tony Ouma",
+        "url": "https://tonyouma.com",
+        "email": "oumat621@gmail.com",
+        "telephone": "+254704051993",
+        "jobTitle": "Frontend Engineer",
+        "description": "Frontend engineer with 5+ years building fintech, edtech, and mobile products. Specialises in React, TypeScript, React Native, and GraphQL.",
+        "image": "https://tonyouma.com/og.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Nairobi",
+          "addressCountry": "KE"
+        },
+        "sameAs": [
+          "https://github.com/tonyouma"
+        ],
+        "knowsAbout": [
+          "React", "Next.js", "React Native", "TypeScript", "GraphQL",
+          "Tailwind CSS", "Tanstack Query", "RTK Query", "Figma",
+          "UI/UX Design", "Fintech", "Mobile Development", "Design Systems"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Gapstack"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Technical University of Mombasa"
+        }
+      }
+    </script>
   </head>
   <body>
     <slot />
